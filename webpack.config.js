@@ -7,13 +7,13 @@ module.exports = {
         path: __dirname + '/public',
         filename: './app.js'
     },
-    devServer = {
+    devServer: {
         port: 8080,
         contentBase: './public'
     },
-    resolve = {
-        extensions: ['', '.js', 'jsx'],
-        alias = {
+    resolve: {
+        extensions: ['', '.js', '.jsx'],
+        alias: {
             modules: __dirname + '/node_modules',
             jquery: 'modules/admin-lte/plugins/jQuery/jquery-2.2.3.min.js',
             bootstrap: 'modules/admin-lite/bootstrap/js/bootstrap.js'
@@ -30,7 +30,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /.js[x]?$/,
-            laoder: 'babel-loader',
+            loader: 'babel-loader',
             exclude: /node_modules/,
             query: {
                 presets: ['es2015', 'react'],
@@ -44,5 +44,4 @@ module.exports = {
             loader: 'file'
         }]
     }
-
 }
